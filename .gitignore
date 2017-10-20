@@ -1,42 +1,73 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist
-/tmp
-/out-tsc
+# Ignore IDE files
+###################
+.idea/
+*.sublime*
 
-# dependencies
-/node_modules
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
+# Ignore Node, Bower & TSD
+##########################
+node_modules
+.bower-*/
 npm-debug.log
-testem.log
-/typings
+bower_components
+#typings
+build
+.tmp
 
-# e2e
-/e2e/*.js
-/e2e/*.map
+# Ignore Test reporters
+###################
+coverage
+report
 
-# System Files
-.DS_Store
+
+# mongo db
+###################
+#Don't commit Mongo Database files
+*.lock
+*.0
+*.1
+*.ns
+journal
+
+# Ignore Web Storm #
+.idea
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.xap
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+# *.sdf
+*.mdf
+*.ldf
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
 Thumbs.db
