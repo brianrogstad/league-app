@@ -34,11 +34,17 @@ import { MatAutocompleteModule,
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { MarketDetailComponent } from './market-detail/market-detail.component';
+import { MarketListComponent } from './market-list/market-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    MarketDetailComponent,
+    MarketListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
