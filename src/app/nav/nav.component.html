@@ -2,15 +2,23 @@
   <span>Custom Toolbar</span>
 
   <mat-toolbar-row>
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon">verified_user</mat-icon>
+    <span>Dashboard</span>
+    <span class="fill-spacer"></span>
+    <mat-icon class="nav-icon">verified_user</mat-icon>
   </mat-toolbar-row>
 
   <mat-toolbar-row>
     <span>Third Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon">favorite</mat-icon>
-    <mat-icon class="example-icon">delete</mat-icon>
+    <span class="fill-spacer"></span>
+    <mat-icon class="nav-icon">favorite</mat-icon>
+    <mat-icon class="nav-icon">delete</mat-icon>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <a [routerLink]="['/dashboard']" href="">Dashboard</a>
+    <span>Third Line</span>
+    <span class="fill-spacer"></span>
+    <mat-icon class="nav-icon">favorite</mat-icon>
+    <mat-icon class="nav-icon">delete</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
