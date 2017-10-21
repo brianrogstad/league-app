@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { MarketDetailComponent } from './market-detail/market-detail.component';
 import { MarketListComponent } from './market-list/market-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CoinService } from './coin.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [CoinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

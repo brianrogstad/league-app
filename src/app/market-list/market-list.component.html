@@ -1,3 +1,11 @@
-<p>
-  market-list works!
-</p>
+<ul>
+  <li *ngFor="let coin of coins" (click)="select(coin)">
+    {{ coin.name }}
+  </li>
+</ul>
+
+<ul class="messages">
+  <li *ngFor="let msg of messages">{{msg}}</li>
+</ul>
+
+<app-market-detail *ngIf="selectedCoin" [coin]="selectedCoin"></app-market-detail>

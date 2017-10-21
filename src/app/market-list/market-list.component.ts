@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Coin, CoinService } from '../coin.service';
+
 @Component({
-  selector: 'app-market-list',
-  templateUrl: './market-list.component.html',
-  styleUrls: ['./market-list.component.scss']
+    moduleId: module.id,
+    selector: 'app-market-list',
+    templateUrl: './market-list.component.html',
+    styleUrls: ['./market-list.component.scss']
 })
 export class MarketListComponent implements OnInit {
+    coins: Array<Coin>;
+    messages: string[] = [];
+    selectedCoin: Coin;
 
-  constructor() { }
+    constructor(private coinService: CoinService) {
+        this.coins = this.coinService.getCoins();
+    }
 
-  ngOnInit() {
-  }
+    select(coin: Coin) {
+        this.selectedCoin = coin;
+    }
+
+    ngOnInit() {
+    }
 
 }
