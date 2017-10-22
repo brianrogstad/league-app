@@ -12,6 +12,9 @@ import { MarketDetailComponent } from './market-detail/market-detail.component';
 import { MarketListComponent } from './market-list/market-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoinService } from './coin.service';
+import { NewsListComponent } from './news-list/news-list.component';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { NewsService } from './news.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { CoinService } from './coin.service';
     NavComponent,
     MarketDetailComponent,
     MarketListComponent,
-    DashboardComponent
+    DashboardComponent,
+    NewsListComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { CoinService } from './coin.service';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [CoinService],
+  providers: [CoinService, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
