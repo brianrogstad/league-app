@@ -1,10 +1,15 @@
+<div class="mat-toolbar-layout">
+    <mat-toolbar-row class="mat-toolbar-row">
+        <a mat-button [routerLink]="['/dashboard']" href="">Home</a>
+        <a mat-button [routerLink]="['/news']" href="">News</a>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <mat-icon>help</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>account_circle</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</div>
 
-<a mat-button [routerLink]="['/dashboard']" href="">Home</a>
-<a mat-button [routerLink]="['/news']" href="">News</a>
 
-<button mat-icon-button>
-    <mat-icon>help</mat-icon>
-</button>
-<button mat-icon-button>
-    <mat-icon>account_circle</mat-icon>
-</button>

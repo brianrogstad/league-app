@@ -1,8 +1,10 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row *ngFor="let coin of coins" (click)="select(coin)">
-    <span>{{ coin.name }}</span>
-    <span class="fill-spacer"></span>
-
+<mat-toolbar color="accent">
+  <span>Coin Market List</span>
+  <mat-toolbar-row class="toolbar-row" *ngFor="let coin of coins" (click)="select(coin)">
+    <button mat-button class="toolbar-button">
+      <span>{{ coin.name }}</span>
+      <span class="fill-spacer"></span>
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 

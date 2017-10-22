@@ -1,21 +1,17 @@
-<div>
-  <header>
-    <nav>
-        <mat-toolbar role="toolbar">
-            <h1>Market Dashboard</h1>
-            <div class="mat-toolbar-layout">
-                <mat-toolbar-row class="mat-toolbar-row">
-                    <app-nav></app-nav>
-                </mat-toolbar-row>
-            </div>
-        </mat-toolbar>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <router-outlet></router-outlet>
-    </section>
-  </main>
+<div class="page-container">
+    <header>
+        <nav>
+            <mat-toolbar role="toolbar" color="primary">
+                <h1>Market App</h1>
+                <app-nav></app-nav>
+            </mat-toolbar>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <router-outlet></router-outlet>
+        </section>
+    </main>
 </div>
 
 
