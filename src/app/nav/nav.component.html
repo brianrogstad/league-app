@@ -1,24 +1,10 @@
-<mat-toolbar color="primary">
-  <span>Custom Toolbar</span>
 
-  <mat-toolbar-row>
-    <span>Dashboard</span>
-    <span class="fill-spacer"></span>
-    <mat-icon class="nav-icon">verified_user</mat-icon>
-  </mat-toolbar-row>
+<a mat-button [routerLink]="['/dashboard']" href="">Home</a>
+<a mat-button [routerLink]="['/news']" href="">News</a>
 
-  <mat-toolbar-row>
-    <span>Third Line</span>
-    <span class="fill-spacer"></span>
-    <mat-icon class="nav-icon">favorite</mat-icon>
-    <mat-icon class="nav-icon">delete</mat-icon>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <a [routerLink]="['/dashboard']" href="">Dashboard</a>
-    <span>Third Line</span>
-    <span class="fill-spacer"></span>
-    <mat-icon class="nav-icon">favorite</mat-icon>
-    <mat-icon class="nav-icon">delete</mat-icon>
-  </mat-toolbar-row>
-</mat-toolbar>
+<button mat-icon-button>
+    <mat-icon>help</mat-icon>
+</button>
+<button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+</button>

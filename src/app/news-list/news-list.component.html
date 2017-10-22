@@ -1,16 +1,16 @@
-<ul>
-  <li *ngFor="let story of stories.articles" (click)="select(story)">
-    {{ story.author }}
-    {{ story.title }}
-    {{ story.description }}
-    {{ story.url }}
-    <img src="{{ story.urlToImage }}">
-    {{ story.publishedAt | date }}
-  </li>
-</ul>
-
-<ul class="messages">
-  <li *ngFor="let msg of messages">{{msg}}</li>
-</ul>
-
-<app-news-detail *ngIf="selectedCoin" [story]="selectedCoin"></app-news-detail>
+<div class="flex-container">
+    <mat-card class="flex-card" *ngFor="let story of stories.articles" (click)="select(story)">
+        <mat-card-header>
+            <mat-card-title class="story-title">{{ story.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{ story.urlToImage }}" alt="Supporting News Story Image">
+        <mat-card-content>
+            <p>{{ story.author }}</p>
+            <p>{{ story.description }}</p>
+            <small>{{ story.publishedAt | date }}</small>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-button href="{{story.url}}" target="_blank">Read The Story</a>
+        </mat-card-actions>
+    </mat-card>
+</div>
