@@ -1,6 +1,11 @@
 <ul>
   <li *ngFor="let coin of coins" (click)="select(coin)">
     {{ coin.name }}
+    {{ coin.symbol }}
+    {{ coin.price_usd | currency:'USD':false}}
+    {{ coin.market_cap_usd | currency:'USD':false }}
+    {{ coin.market_cap_usd | currency:'USD':false }}
+    {{ coin.percent_change_1h | percent}}
   </li>
 </ul>
 

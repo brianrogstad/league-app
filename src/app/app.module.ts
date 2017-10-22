@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
+import './rxjs-extensions';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routableComponents } from './app.routes';
 
@@ -22,6 +23,7 @@ import { CoinService } from './coin.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule
