@@ -1,3 +1,16 @@
-<p>
-  news-list works!
-</p>
+<ul>
+  <li *ngFor="let story of stories.articles" (click)="select(story)">
+    {{ story.author }}
+    {{ story.title }}
+    {{ story.description }}
+    {{ story.url }}
+    <img src="{{ story.urlToImage }}">
+    {{ story.publishedAt | date }}
+  </li>
+</ul>
+
+<ul class="messages">
+  <li *ngFor="let msg of messages">{{msg}}</li>
+</ul>
+
+<app-news-detail *ngIf="selectedCoin" [story]="selectedCoin"></app-news-detail>

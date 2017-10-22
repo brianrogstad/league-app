@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stories, NewsService } from '../news.service';
 
 @Component({
-  selector: 'app-news-detail',
-  templateUrl: './news-detail.component.html',
-  styleUrls: ['./news-detail.component.scss']
+    moduleId: module.id,
+    selector: 'app-news-detail',
+    templateUrl: './news-detail.component.html',
+    styleUrls: ['./news-detail.component.scss']
 })
 export class NewsDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() story: Stories;
 
   ngOnInit() {
   }

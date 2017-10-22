@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { Stories, NewsService } from '../news.service';
 
 @Component({
-  selector: 'app-news-list',
-  templateUrl: './news-list.component.html',
-  styleUrls: ['./news-list.component.scss']
+    moduleId: module.id,
+    selector: 'app-news-list',
+    templateUrl: './news-list.component.html',
+    styleUrls: ['./news-list.component.scss']
 })
 export class NewsListComponent implements OnInit {
+    errorMessage: string;
+    selectedStories: Stories;
+    stories: Stories[];
 
-  constructor() { }
+    constructor(private storiesService: NewsService) {}
 
-  ngOnInit() {
-  }
+    getStories() {
+        this.storiesService.getStories()
+        .subscribe(
+            stories => this.stories = stories,
+            error => this.errorMessage = <any>error
+        );
+    }
+
+    ngOnInit() {
+        this.getStories();
+    }
+
+    select(stories: Stories) {
+        this.selectedStories = stories;
+    }
 
 }
