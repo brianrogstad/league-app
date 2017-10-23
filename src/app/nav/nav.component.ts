@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatToolbarModule} from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +8,13 @@ import {MatToolbarModule} from '@angular/material';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  go(path) {
+    this.router.navigateByUrl(path);
   }
 
 }

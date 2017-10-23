@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsListComponent } from '../news-list/news-list.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,9 @@ import { NewsListComponent } from '../news-list/news-list.component';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      private router: Router,
+  ) {}
 
   ngOnInit() {
   }

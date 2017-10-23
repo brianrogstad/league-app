@@ -1,27 +1,29 @@
-<mat-toolbar color="accent">
-  <span>Coin Market List</span>
-  <mat-toolbar-row class="toolbar-row" *ngFor="let coin of coins" (click)="select(coin)">
-    <button mat-button class="toolbar-button">
-      <span>{{ coin.name }}</span>
-      <span class="fill-spacer"></span>
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar>
 
-<ul class="messages">
-  <li *ngFor="let msg of messages">{{msg}}</li>
-</ul>
+<article>
+    <mat-toolbar color="accent">
+      <span>Coin Market List</span>
+      <mat-toolbar-row class="toolbar-row" *ngFor="let coin of coins" (click)="select(coin)">
+        <button mat-button class="toolbar-button">
+          <span>{{ coin.name }}</span>
+          <span class="fill-spacer"></span>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
 
-<ul>
-  <li >
-    
-    {{ coin.symbol }}
-    {{ coin.price_usd | currency:'USD':false}}
-    {{ coin.market_cap_usd | currency:'USD':false }}
-    {{ coin.market_cap_usd | currency:'USD':false }}
-    {{ coin.percent_change_1h | percent}}
-  </li>
-</ul>
+    <ul class="messages">
+      <li *ngFor="let msg of messages">{{msg}}</li>
+    </ul>
 
-<app-market-detail *ngIf="selectedCoin" [coin]="selectedCoin"></app-market-detail>
-
+<!--     <ul>
+      <li >
+        
+        {{ coin.symbol }}
+        {{ coin.price_usd | currency:'USD':false}}
+        {{ coin.market_cap_usd | currency:'USD':false }}
+        {{ coin.market_cap_usd | currency:'USD':false }}
+        {{ coin.percent_change_1h | percent}}
+      </li>
+    </ul>
+ -->
+    <app-market-detail *ngIf="selectedCoin" [coin]="selectedCoin"></app-market-detail>
+</article>

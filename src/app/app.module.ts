@@ -4,7 +4,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import './rxjs-extensions';
 import { AppComponent } from './app.component';
-import { AppRoutingModule, routableComponents } from './app.routes';
+import { AppRoutingModule } from './app.routes';
 
 import { MaterialModule } from './material-module';
 import { NavComponent } from './nav/nav.component';
@@ -17,6 +17,13 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { NewsService } from './news.service';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    HttpModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
+  ],
   declarations: [
     AppComponent,
     NavComponent,
@@ -25,13 +32,6 @@ import { NewsService } from './news.service';
     DashboardComponent,
     NewsListComponent,
     NewsDetailComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule
   ],
   providers: [CoinService, NewsService],
   bootstrap: [AppComponent]

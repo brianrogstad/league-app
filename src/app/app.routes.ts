@@ -10,9 +10,9 @@ import { NewsListComponent } from './news-list/news-list.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'markets', component: MarketListComponent, pathMatch: 'full'},
+  { path: 'markets', component: MarketListComponent},
   { path: 'news', component: NewsListComponent},
-  { path: 'detail/:id', component: MarketDetailComponent, pathMatch: 'full'},
+  { path: 'detail/:id', component: MarketDetailComponent},
 ];
 
 @NgModule({
@@ -22,10 +22,3 @@ export const routes: Routes = [
 
 export class AppRoutingModule { }
 
-
-export const routableComponents = [
-  DashboardComponent,
-  MarketDetailComponent,
-  MarketListComponent,
-  NewsListComponent,
-];
