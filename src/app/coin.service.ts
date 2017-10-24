@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import './rxjs-extensions';
 
 export class Coin {
   constructor(public id: string, public name: string, public symbol: string, public price_usd: string, public market_cap_usd: string, public percent_change_1h: string) {}

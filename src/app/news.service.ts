@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import './rxjs-extensions';
 
 export class Stories {
   constructor(articles: object) {}
