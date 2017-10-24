@@ -21,6 +21,14 @@ export class MarketListComponent implements OnInit {
         );
     }
 
+    getAllCoins() {
+        this.coinService.getAllCoins()
+        .subscribe(
+            coins => this.coins = coins,
+            error => this.errorMessage = <any>error
+        );
+    }
+
     ngOnInit() {
         this.getCoins();
     }

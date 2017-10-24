@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { HttpModule } from '@angular/http';
+
 import './rxjs-extensions';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routes';
-
 import { MaterialModule } from './material-module';
+
 import { NavComponent } from './nav/nav.component';
 import { MarketDetailComponent } from './market-detail/market-detail.component';
 import { MarketListComponent } from './market-list/market-list.component';
@@ -21,7 +21,6 @@ import { NewsService } from './news.service';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MaterialModule
   ],
   declarations: [
@@ -33,7 +32,10 @@ import { NewsService } from './news.service';
     NewsListComponent,
     NewsDetailComponent
   ],
-  providers: [CoinService, NewsService],
+  providers: [
+    CoinService,
+    NewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

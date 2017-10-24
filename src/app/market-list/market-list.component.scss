@@ -8,3 +8,19 @@
 .toolbar-row {
     height: auto;
 }
+
+.coin-spacer {
+    flex: 1 1 auto;
+}
+
+.market-list {
+    flex: 0 0 60%;
+}
+
+.market-detail {
+    flex: 0 0 40%;
+}
+
+.market-container {
+    display: flex;
+}
