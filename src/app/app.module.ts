@@ -6,14 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routes';
 import { MaterialModule } from './material-module';
+import { CovalentLayoutModule } from '@covalent/core';
 
-import { NavComponent } from './nav/nav.component';
-import { MarketDetailComponent } from './market-detail/market-detail.component';
+import { NavComponent } from './nav/nav.component'; 
 import { MarketListComponent } from './market-list/market-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoinService } from './coin.service';
 import { NewsListComponent } from './news-list/news-list.component';
-import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { NewsService } from './news.service';
 
 @NgModule({
@@ -21,16 +20,15 @@ import { NewsService } from './news.service';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    CovalentLayoutModule
   ],
   declarations: [
     AppComponent,
     NavComponent,
-    MarketDetailComponent,
     MarketListComponent,
     DashboardComponent,
-    NewsListComponent,
-    NewsDetailComponent
+    NewsListComponent
   ],
   providers: [
     CoinService,

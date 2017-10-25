@@ -1,6 +1,7 @@
+
 .toolbar-button {
     flex: 1 1 auto;
-    text-align: left;
+    display: inline;
     height: 60px;
     font-size: .8em;
 }
@@ -9,18 +10,18 @@
     height: auto;
 }
 
-.coin-spacer {
-    flex: 1 1 auto;
+.align-right {
+    float: right;
+    line-height: 1.2em;
+    text-align: right;
 }
 
-.market-list {
-    flex: 0 0 60%;
+.align-left {
+    float: left;
+    line-height: 1.2em;
+    text-align: left;
 }
 
-.market-detail {
-    flex: 0 0 40%;
-}
-
-.market-container {
-    display: flex;
+.sub-text {
+    display: block;
 }

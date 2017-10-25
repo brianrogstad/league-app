@@ -1,6 +1,8 @@
+
 .flex-container {
-    display: flex;
+    display: flex; 
     flex-flow: row wrap;
+    align-items: flex-start;
     justify-content: space-around;
     padding: 0;
     margin: 0;
@@ -11,8 +13,13 @@
     width: 400px;
     height: auto;
     margin-top: 10px;
+    align-self: stretch;
 }
 
 .story-title {
     font-size: 20px;
+}
+
+.story-btn {
+    width: 100%;
 }

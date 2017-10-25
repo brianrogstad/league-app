@@ -13,7 +13,7 @@ export class CoinService {
 
     getCoins() {
         return this.http
-        .get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
+        .get('https://api.coinmarketcap.com/v1/ticker/?limit=20')
         .map((response: Response) => <Coin[]>response.json())
         .do(data => console.log(data))
         .catch(this.handleError);

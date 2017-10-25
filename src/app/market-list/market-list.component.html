@@ -1,19 +1,16 @@
-
-<article class="market-container">
-    <section class="market-list">
-        <mat-toolbar color="basic">
-        <span>Coin Market List</span>
-            <mat-toolbar-row class="toolbar-row" *ngFor="let coin of coins" (click)="select(coin)">
-            <button mat-button class="toolbar-button">
-                {{ coin.name }}
-                <span class="coin-spacer"></span>
-                {{ coin.percent_change_1h | number}}%
-            </button>
-            </mat-toolbar-row>
-        </mat-toolbar>
-    </section>
-
-     <section class="market-detail">
-         <app-market-detail *ngIf="selectedCoin" [coin]="selectedCoin"></app-market-detail>
-     </section>
+<article>
+    <mat-toolbar color="basic">
+    <span>Top Twenty Crypto Currencies</span>
+        <mat-toolbar-row layout="row" class="toolbar-row" *ngFor="let coin of coins">
+        <button mat-button class="toolbar-button">
+            <span class="align-left">{{ coin.name }}
+                <small class="sub-text">({{ coin.symbol }})</small>
+            </span>
+            <span class="align-right">{{ coin.percent_change_1h | number}}%
+                <small class="sub-text">{{ coin.market_cap_usd | currency:'USD':true:'2.2-4' }}</small>
+            </span>
+        </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </article>
+
