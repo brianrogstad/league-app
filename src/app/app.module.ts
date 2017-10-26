@@ -7,13 +7,16 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routes';
 import { MaterialModule } from './material-module';
 import { CovalentLayoutModule } from '@covalent/core';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NavComponent } from './nav/nav.component'; 
+import { NavComponent } from './nav/nav.component';
 import { MarketListComponent } from './market-list/market-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoinService } from './coin.service';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsService } from './news.service';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   imports: [
@@ -21,14 +24,17 @@ import { NewsService } from './news.service';
     HttpModule,
     AppRoutingModule,
     MaterialModule,
-    CovalentLayoutModule
+    CovalentLayoutModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
     NavComponent,
     MarketListComponent,
     DashboardComponent,
-    NewsListComponent
+    NewsListComponent,
+    ChartComponent
   ],
   providers: [
     CoinService,

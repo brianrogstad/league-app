@@ -1,5 +1,5 @@
 <article>
-    <mat-card color="news-card" role="group" *ngFor="let story of stories.articles">
+    <mat-card color="news-card" role="group" *ngFor="let story of stories">
         <mat-card-header>
             <mat-card-title class="story-title">{{ story.title }}</mat-card-title>
             <mat-card-subtitle>{{ story.publishedAt | date }}</mat-card-subtitle>

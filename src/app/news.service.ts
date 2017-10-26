@@ -14,7 +14,7 @@ export class NewsService {
     getStories() {
         return this.http
         .get('https://newsapi.org/v1/articles?source=fortune&sortBy=top&apiKey=8b1db5f344fa47769427bbccbf2631a7')
-        .map((response: Response) => <Stories[]>response.json())
+        .map((response: Response) => response.json().articles)
         .do(data => console.log(data))
         .catch(this.handleError);
     }
