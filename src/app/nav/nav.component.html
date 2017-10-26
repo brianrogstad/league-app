@@ -1,16 +1,18 @@
-<mat-toolbar color="primary">
-  <span>Custom Toolbar</span>
 
-  <mat-toolbar-row>
-    <span>Second Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon">verified_user</mat-icon>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <span>Third Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon">favorite</mat-icon>
-    <mat-icon class="example-icon">delete</mat-icon>
-  </mat-toolbar-row>
+<mat-toolbar role="header" color="primary">
+    <button mat-button (click)="go('/')"><h1>Market App</h1></button>
+    <button mat-button (click)="go('/markets')">Markets</button>
+    <button mat-button (click)="go('/news')">Stories</button>
+    <span class="menu-spacer"></span>
+    <div class="menu-tools">
+        <mat-toolbar-row class="mat-toolbar-row">
+            <button mat-icon-button>
+                <mat-icon>help</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>account_circle</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </div>
 </mat-toolbar>
+

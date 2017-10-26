@@ -1,0 +1,16 @@
+<article>
+    <mat-card color="news-card" role="group" *ngFor="let story of stories">
+        <mat-card-header>
+            <mat-card-title class="story-title">{{ story.title }}</mat-card-title>
+            <mat-card-subtitle>{{ story.publishedAt | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <!-- <p>{{ story.author }}</p>
+            <p>{{ story.description }}</p> -->
+            <img mat-card-image class="story-image" src="{{ story.urlToImage }}" alt="Supporting News Story Image">
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-raised-button class="story-btn" color="accent" href="{{story.url}}" target="_blank">Read The Story</a>
+        </mat-card-actions>
+    </mat-card>
+</article>
