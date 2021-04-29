@@ -1,0 +1,9 @@
+<div class="game-nav">
+    <h3>Filter by Game Type</h3>
+    <div *ngFor="let gameType of gameTypes; let i = index;" class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" [checked]="checked(gameType)" [(ngModel)]="gameType.checked" [value]="gameType.value"> 
+        <span>{{gameType.value}}</span>
+      </label>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="lane-nav">
+    <h3>Filter by Lane</h3>
+
+    <div *ngFor="let filterRole of filterRoles; let i = index;" class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" [checked]="checked(filterRole)" [(ngModel)]="filterRole.checked" [value]="filterRole.value"> 
+        <span>{{filterRole.value}}</span>
+      </label>
+    </div>
+</div>

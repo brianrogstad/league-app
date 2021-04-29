@@ -1,0 +1,61 @@
+<app-loader *ngIf="loading"></app-loader>
+<article *ngIf="!loading">
+    <section class="left-side">
+        <app-lane-nav (postRole)="onFilterRole($event)"></app-lane-nav>
+        <app-game-nav (postGameType)=onFilterGameType($event)></app-game-nav>
+        <app-season-nav (postSeason)="onFilterSeason($event)"></app-season-nav>
+    </section>
+
+    <section class="right-side">
+        
+        <!-- <table id="gamesTable" class="table table-hover"> -->
+        <table mat-table matSort (matSortChange)="sortData($event)">
+            <thead>
+                <tr>
+                    <th mat-header-cell>Champion</th>
+                    <th mat-header-cell mat-sort-header="timestamp" >Time</th>
+                    <th mat-header-cell mat-sort-header="queue">Game Type</th>
+                    <th mat-header-cell>Win or Loss</th>
+                    <th mat-header-cell mat-sort-header="role">Role</th>
+                    <th mat-header-cell>KDA</th>
+                    <th mat-header-cell mat-sort-header="totalMinionsKilled">CS</th>
+                    <th mat-header-cell mat-sort-header="wardsPlaced">Wards</th>
+                    <th mat-header-cell mat-sort-header="visionScore">Vision Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let game of sortedGames" [ngClass]="game.stats.win ? 'table-success' : 'table-danger'">
+                    <td class="champion">
+                        <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/{{game.character.image.full}}"/>
+                    </td>
+                    <td>
+                        {{ game.timestamp | date }}
+                    </td>
+                    <td>
+                        {{ game.queue }}
+                    </td>
+                    <td>
+                        <span *ngIf="game.stats.win">Win</span>
+                        <span *ngIf="!game.stats.win">Loss</span>
+                    </td>
+                    <td>
+                        {{ game.role }}
+                    </td>
+                    <td>
+                        {{ game.stats.kills }} / {{ game.stats.deaths }} / {{ game.stats.assists }} | {{game.kda}}
+                    </td>
+                    <td>
+                        {{ game.stats.totalMinionsKilled }}
+                    </td>
+                    <td>
+                        <span>{{ game.stats.wardsPlaced }}</span>
+                        <span *ngIf="!game.stats.wardsPlaced">0</span>
+                    </td>
+                    <td>
+                        {{ game.stats.visionScore }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>

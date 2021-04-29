@@ -1,22 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Pipe, PipeTransform } from '@angular/core'; 
+import { FormsModule } from '@angular/forms';
 import './rxjs-extensions';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routes';
 import { MaterialModule } from './material-module';
-import { CovalentLayoutModule } from '@covalent/core';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { NavComponent } from './nav/nav.component';
-import { MarketListComponent } from './market-list/market-list.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CoinService } from './coin.service';
-import { NewsListComponent } from './news-list/news-list.component';
-import { NewsService } from './news.service';
-import { ChartComponent } from './chart/chart.component';
+import { GameService } from './game.service';
+import { ChampionService } from './champion.service';
+import { GamesData } from './gamesData';
+import { GameData } from './gameData';
+import { GameComponent } from './game/game.component';
+import { GamesComponent } from './games/games.component';
+import { ChampionsComponent } from './champions/champions.component';
+import { SeasonNavComponent } from './season-nav/season-nav.component';
+import { GameNavComponent } from './game-nav/game-nav.component';
+import { LaneNavComponent } from './lane-nav/lane-nav.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   imports: [
@@ -24,21 +27,25 @@ import { ChartComponent } from './chart/chart.component';
     HttpModule,
     AppRoutingModule,
     MaterialModule,
-    CovalentLayoutModule,
-    NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
     NavComponent,
-    MarketListComponent,
-    DashboardComponent,
-    NewsListComponent,
-    ChartComponent
+    GameComponent,
+    GamesComponent,
+    ChampionsComponent,
+    SeasonNavComponent,
+    GameNavComponent,
+    LaneNavComponent,
+    LoaderComponent
   ],
   providers: [
-    CoinService,
-    NewsService
+    GameService,
+    GameData,
+    GamesData,
+    ChampionService
   ],
   bootstrap: [AppComponent]
 })

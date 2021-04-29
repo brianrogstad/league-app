@@ -1,23 +1,12 @@
-
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.css";
-@import url('https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
-body {
-    font-family: 'PT Sans', sans-serif;
-}
-
 .spinner {
-  margin: 400px auto;
-  width: 140px;
+  margin: 100px auto 0;
+  width: 70px;
   text-align: center;
-  height: 100vh;
 }
 
 .spinner > div {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   background-color: #333;
 
   border-radius: 100%;

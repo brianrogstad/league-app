@@ -1,0 +1,87 @@
+<app-loader *ngIf="loading"></app-loader>
+<article *ngIf="!loading">
+    <section class="left-side">
+        <app-lane-nav (postRole)="onFilterRole($event)"></app-lane-nav>
+        <app-game-nav (postGameType)=onFilterGameType($event)></app-game-nav>
+        <app-season-nav (postSeason)="onFilterSeason($event)"></app-season-nav>
+    </section>
+
+    <section class="right-side">
+        <!-- <section>
+            <mat-card>
+                <mat-card-title>Total Games Played</mat-card-title>
+                <mat-card-subtitle>sdfdsf</mat-card-subtitle>
+            </mat-card>
+            
+            <mat-card>
+                <mat-card-title>Total Win / Loss</mat-card-title>
+                <mat-card-subtitle>sdasd</mat-card-subtitle>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-title>Overall Winrate</mat-card-title>
+                <mat-card-subtitle>sdasd</mat-card-subtitle>
+            </mat-card>
+            
+            <mat-card>
+                <mat-card-title>Overall KDA</mat-card-title>
+                <mat-card-subtitle>asdadsasd</mat-card-subtitle>
+            </mat-card>
+        </section> -->
+
+        <table mat-table matSort (matSortChange)="sortData($event)">
+            <thead>
+                <tr>
+                    <th mat-header-cell>Champion</th>
+                    <th mat-header-cell>Games Played</th>
+                    <th mat-header-cell>Win / Loss</th>
+                    <th mat-header-cell>Win Rate</th>
+                    <th mat-header-cell>Overall KDA</th>
+                    <th mat-header-cell>Total Kills</th>
+                    <th mat-header-cell>Total Deaths</th>
+                    <th mat-header-cell>Total Assists</th>
+                    <th mat-header-cell mat-sort-header="totalMinionsKilled">Avg. CS</th>
+                    <th mat-header-cell mat-sort-header="wardsPlaced">Avg. Wards</th>
+                    <th mat-header-cell mat-sort-header="visionScore">Avg. Vision Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let champ of sortedChamps" [ngClass]="champ.winrate > .6 && champ.gamesPlayed > 10 ? 'table-primary' : champ.winrate > .5 && champ.gamesPlayed > 10 ? 'table-success' : 'table-secondary'">
+                    <td class="champion">
+                        <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/{{champ.champImage}}"/>
+                    </td>
+                    <td>
+                        {{ champ.gamesPlayed }}
+                    </td>
+                    <td>
+                        {{ champ.win }} / {{ champ.loss }}
+                    </td>
+                    <td>
+                        {{ champ.winrate | percent}}
+                    </td>
+                    <td>
+                        {{champ.kdaTotal | number}}
+                    </td>
+                    <td>
+                        {{champ.killTotal}}
+                    </td>
+                    <td>
+                        {{champ.deathTotal}}
+                    </td>
+                    <td>
+                        {{champ.assistTotal}}
+                    </td>
+                    <td>
+                        {{ champ.csTotal | number:'1.0-0' }}
+                    </td>
+                    <td>
+                        {{ champ.wardTotal | number:'1.0-0' }}
+                    </td>
+                    <td>
+                        {{ champ.vsTotal | number:'1.0-0' }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>

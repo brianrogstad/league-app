@@ -1,0 +1,9 @@
+<div class="season-nav">
+    <h3>Filter by Season</h3>
+    <div *ngFor="let filterSeason of filterSeasons; let i = index;" class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" [checked]="checked(filterSeason)" [(ngModel)]="filterSeason.checked" [value]="filterSeason.value"> 
+        <span>{{filterSeason.value}}</span>
+      </label>
+    </div>
+</div>

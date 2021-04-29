@@ -1,0 +1,38 @@
+.right-side {
+    float: right;
+    width: 80%;
+    height: auto;
+}
+
+.left-side {
+    float: left;
+    width: 20%;
+    height: auto;
+}
+
+table {
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+
+    td, th {
+        vertical-align: middle;
+        padding: 15px;
+    }
+
+    tr {
+        border-bottom: 2px solid #fff;
+    }
+}
+
+
+.champion {
+    padding: 0;
+
+    img {
+        border-radius: 60px;
+        margin: 0 auto;
+        display: block;
+        max-width: 35%;
+    }
+}

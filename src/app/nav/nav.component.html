@@ -1,18 +1,14 @@
-
-<mat-toolbar role="header" color="primary">
-    <button mat-button (click)="go('/')"><h1>Market App</h1></button>
-    <button mat-button (click)="go('/markets')">Markets</button>
-    <button mat-button (click)="go('/news')">Stories</button>
-    <span class="menu-spacer"></span>
-    <div class="menu-tools">
-        <mat-toolbar-row class="mat-toolbar-row">
-            <button mat-icon-button>
-                <mat-icon>help</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>account_circle</mat-icon>
-            </button>
-        </mat-toolbar-row>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="games" routerLinkActive="active">Games</a>
+            <a class="nav-item nav-link" routerLink="champions" routerLinkActive="active">Champions</a>
+        </div>
     </div>
-</mat-toolbar>
+    <div class="menu-tools">
+        <button><i class="fas fa-refresh"></i></button>
+        <button><i class="fas fa-question"></i></button>
+        <button><i class="fas fa-user"></i></button>
+    </div>
+</nav>
 

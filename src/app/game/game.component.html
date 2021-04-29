@@ -1,0 +1,25 @@
+<article>
+    <div class="container-fluid">
+        <div>
+            <p>Win Lose </p>
+        </div>
+        <div>
+            <p>KDA</p>
+        </div>
+        <div>
+            <p>Stats</p>
+        </div>
+        <div>
+            <p>Other Info</p>
+        </div>
+    </div>
+
+    <h4>Game {{title}} Details</h4>
+    <div *ngIf="loading"><app-loader></app-loader></div>
+    <div class="row" *ngFor="let detail of Details">
+        <div class="btn btn-outline-secondary">
+            <span class="pull-left">{{ detail }}</span>
+            <span class="pull-right">{{ details}}</span>
+        </div>
+    </div>
+</article>
